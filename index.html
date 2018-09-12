@@ -3,16 +3,23 @@
     <head>
         <title>Basic Web Page</title>
     </head>
-    <body>
-<h1>Check This Label</h1>
+    <body onload="setTimeout(textFn, 10000)">
+<h1 id='labelCheck' style="display: none;">Label-1</h1>
         <div id='newButtonArea'>
         </div>
 <object height='800' width='1200' data="https://www.lipsum.com/feed/html"></object>
-<button onclick="myFunction()">Click me</button>
+<button onclick="myFunction()">Button to click</button>
 <script>
+function textFn() {
+var h = document.createElement("H1")                // Create a <h1> element
+var t = document.createTextNode("Label-2");     // Create a text node
+h.appendChild(t);
+document.getElementById('newButtonArea').appendChild(h);
+document.getElementById("labelCheck").style.display = "block";
+}
 function myFunction() {
 var btn = document.createElement("BUTTON");        // Create a <button> element
-var t = document.createTextNode("CLICK ME");       // Create a text node
+var t = document.createTextNode("Button to test");       // Create a text node
 btn.appendChild(t);                                // Append the text to <button>
 document.getElementById('newButtonArea').appendChild(btn);                    // Append <button> to <body>
 }
