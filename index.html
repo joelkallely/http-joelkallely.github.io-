@@ -5,6 +5,15 @@
     </head>
     <body>
 <h1>Check This Label</h1>
-<object id='object' height='800' width='1200' data="https://www.lipsum.com/feed/html"></object>
+<object height='800' width='1200' data="https://www.lipsum.com/feed/html"></object>
+<button onclick="myFunction()">Click me</button>
+<script>
+function myFunction() {
+var btn = document.createElement("BUTTON");        // Create a <button> element
+var t = document.createTextNode("CLICK ME");       // Create a text node
+btn.appendChild(t);                                // Append the text to <button>
+document.body.appendChild(btn);                    // Append <button> to <body>
+}
+</script>
     </body>
 </html>
