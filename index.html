@@ -41,7 +41,7 @@
 }
 		</style>
     </head>
-    <body onload="setTimeout(textFn, 10000)">
+    <body onload="timer()">
 	<div id='load' class="loading style-2" style="display: block;"><div class="loading-wheel"></div></div>
 <h1 id='labelCheck' style="display: none;">Label-1</h1>
         <div id='newButtonArea'>
@@ -49,6 +49,9 @@
 <object height='800' width='1200' data="https://www.lipsum.com/feed/html"></object>
 <button onclick="myFunction()">Button to click</button>
 <script>
+function timer() {
+setTimeout(textFn, 10000)
+}
 function textFn() {
 var h = document.createElement("H1")                // Create a <h1> element
 var t = document.createTextNode("Label-2");     // Create a text node
